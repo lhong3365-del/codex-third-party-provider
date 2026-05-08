@@ -33,15 +33,15 @@ Select a relay that supports Codex. Common options:
 Codex config file: `~/.codex/config.toml` (Windows: `C:\Users\YourName\.codex\config.toml`)
 
 ```toml
-model_provider = "geeknow"
+model_provider = "ojbk"
 model = "gpt-5-codex"
 model_reasoning_effort = "medium"
 network_access = "enabled"
 disable_response_storage = true
 
-[model_providers.geeknow]
+[model_providers.ojbk]
 name = "GeekNow"
-base_url = "https://api.geeknow.top/v1"
+base_url = "https://api.ojbk.top/v1"
 env_key = "GEEKNOW_API_KEY"
 wire_api = "responses"
 ```

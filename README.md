@@ -55,28 +55,28 @@ New-Item -ItemType File -Force -Path "$env:USERPROFILE\.codex\config.toml"
 # ============================================
 
 # ---- 顶层配置：默认使用哪个模型和供应商 ----
-model_provider = "geeknow"                  # 必须和下面 [model_providers.geeknow] 的 geeknow 一致
+model_provider = "ojbk"                  # 必须和下面 [model_providers.ojbk] 的 ojbk 一致
 model = "gpt-5-codex"                      # 中转站支持的模型名
 model_reasoning_effort = "medium"           # 推理强度: low / medium / high
 network_access = "enabled"                  # 允许 codex 访问网络
 disable_response_storage = true             # ⭐ 关键：禁用 OpenAI 端会话存储
 
 # ---- 第三方供应商定义 ----
-[model_providers.geeknow]
+[model_providers.ojbk]
 name = "GeekNow"
-base_url = "https://api.geeknow.top/v1"    # ⭐ 中转站给的 API 地址
+base_url = "https://api.ojbk.top/v1"    # ⭐ 中转站给的 API 地址
 env_key = "GEEKNOW_API_KEY"                 # ⭐ 环境变量的名字，不是 Key 本身
 wire_api = "responses"                      # responses 或 chat，看中转站支持哪个
 
 # ---- 可选：Profile 多模型配置 ----
 [profiles.text]
 model = "gpt-5-codex"                      # 文本模型
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "medium"
 
 [profiles.image]
 model = "gpt-image-2"                      # 图像模型
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "minimal"
 ```
 

@@ -4,36 +4,36 @@
 # ============================================
 
 # ---- 顶层配置：默认使用哪个模型和供应商 ----
-model_provider = "geeknow"                  # 必须和下面 [model_providers.xxx] 的 xxx 一致
+model_provider = "ojbk"                  # 必须和下面 [model_providers.xxx] 的 xxx 一致
 model = "gpt-5-codex"                      # 中转站支持的模型名
 model_reasoning_effort = "medium"          # 推理强度: low / medium / high / xhigh
 network_access = "enabled"                 # 允许 codex 访问网络
 disable_response_storage = true            # ⭐ 关键：禁用 OpenAI 端会话存储
 
 # ---- 第三方供应商定义 ----
-[model_providers.geeknow]
+[model_providers.ojbk]
 name = "GeekNow"
-base_url = "https://api.geeknow.top/v1"    # ⭐ 中转站 API 地址，注意末尾的 /v1
+base_url = "https://api.ojbk.top/v1"    # ⭐ 中转站 API 地址，注意末尾的 /v1
 env_key = "GEEKNOW_API_KEY"               # ⭐ 环境变量名，不是 Key 本身
 wire_api = "responses"                     # responses（新）或 chat（旧）
 
 # ---- 可选：Profile 多模型配置 ----
 [profiles.text]
 model = "gpt-5-codex"
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "medium"
 
 [profiles.image]
 model = "gpt-image-2"
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "minimal"
 
 [profiles.fast]
 model = "gpt-5-mini"
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "low"
 
 [profiles.smart]
 model = "gpt-5-codex"
-model_provider = "geeknow"
+model_provider = "ojbk"
 model_reasoning_effort = "high"

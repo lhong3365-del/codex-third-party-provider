@@ -9,9 +9,9 @@
 ## 配置文件示例
 
 ```toml
-[model_providers.geeknow]
+[model_providers.ojbk]
 name = "GeekNow"
-base_url = "https://api.geeknow.top/v1"
+base_url = "https://api.ojbk.top/v1"
 env_key = "GEEKNOW_API_KEY"
 wire_api = "responses"
 ```

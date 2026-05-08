@@ -1,8 +1,8 @@
-# GeekNow 中转站配置教程
+# OJBK 中转站配置教程
 
 ## 注册与获取 API Key
 
-1. 访问 GeekNow 官网注册账号
+1. 访问 OJBK 官网注册账号
 2. 进入"API Keys"页面创建新 Key
 3. 复制保存 Key（只显示一次）
 
@@ -10,9 +10,9 @@
 
 ```toml
 [model_providers.ojbk]
-name = "GeekNow"
+name = "ojbk"
 base_url = "https://api.ojbk.top/v1"
-env_key = "GEEKNOW_API_KEY"
+env_key = "OJBK_API_KEY"
 wire_api = "responses"
 ```
 
@@ -21,13 +21,13 @@ wire_api = "responses"
 **Windows（PowerShell）：**
 
 ```powershell
-[Environment]::SetEnvironmentVariable("GEEKNOW_API_KEY", "sk-你的真实Key", [EnvironmentVariableTarget]::User)
+[Environment]::SetEnvironmentVariable("OJBK_API_KEY", "sk-你的真实Key", [EnvironmentVariableTarget]::User)
 ```
 
 **macOS / Linux：**
 
 ```bash
-echo 'export GEEKNOW_API_KEY="sk-你的真实Key"' >> ~/.bashrc
+echo 'export OJBK_API_KEY="sk-你的真实Key"' >> ~/.bashrc
 source ~/.bashrc
 ```
 

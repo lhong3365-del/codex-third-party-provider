@@ -24,7 +24,7 @@ A guide for developers in China to use OpenAI Codex via third-party relay APIs, 
 
 Select a relay that supports Codex. Common options:
 
-- **GeekNow** - Stable and reliable
+- **OJBK** - Stable and reliable
 - **PackyAPI** - Well-documented
 - **Shenma API** - Established provider
 
@@ -40,9 +40,9 @@ network_access = "enabled"
 disable_response_storage = true
 
 [model_providers.ojbk]
-name = "GeekNow"
+name = "ojbk"
 base_url = "https://api.ojbk.top/v1"
-env_key = "GEEKNOW_API_KEY"
+env_key = "OJBK_API_KEY"
 wire_api = "responses"
 ```
 
@@ -50,12 +50,12 @@ wire_api = "responses"
 
 **Windows (PowerShell):**
 ```powershell
-[Environment]::SetEnvironmentVariable("GEEKNOW_API_KEY", "sk-xxxxx", [EnvironmentVariableTarget]::User)
+[Environment]::SetEnvironmentVariable("OJBK_API_KEY", "sk-xxxxx", [EnvironmentVariableTarget]::User)
 ```
 
 **macOS / Linux:**
 ```bash
-echo 'export GEEKNOW_API_KEY="sk-xxxxx"' >> ~/.bashrc
+echo 'export OJBK_API_KEY="sk-xxxxx"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -71,7 +71,7 @@ Type `Hello` to test if it works.
 
 | Provider | wire_api | Notes |
 |----------|----------|-------|
-| GeekNow | responses | Stable |
+| OJBK | responses | Stable |
 | PackyAPI | responses | Well-documented |
 | Shenma API | responses / chat | Established |
 

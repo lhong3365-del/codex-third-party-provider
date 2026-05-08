@@ -9,7 +9,7 @@
 | [docs/02-faq.md](./docs/02-faq.md) | 常见问题 |
 | [docs/03-troubleshooting.md](./docs/03-troubleshooting.md) | 故障排查 |
 | [config-examples/config.toml](./config-examples/config.toml) | 完整配置模板 |
-| [config-examples/ojbk.md](./config-examples/ojbk.md) | GeekNow 配置教程 |
+| [config-examples/ojbk.md](./config-examples/ojbk.md) | OJBK 配置教程 |
 | [config-examples/other-providers.md](./config-examples/other-providers.md) | 其他中转站配置 |
 
 ---
@@ -24,7 +24,7 @@ codex-third-party-provider/
 ├── SUMMARY.md                     # 本文件
 ├── config-examples/
 │   ├── config.toml               # 完整配置模板
-│   ├── ojbk.md                 # GeekNow 配置
+│   ├── ojbk.md                 # OJBK 配置
 │   └── other-providers.md        # 其他中转站
 ├── docs/
 │   ├── 01-quickstart.md          # 快速开始

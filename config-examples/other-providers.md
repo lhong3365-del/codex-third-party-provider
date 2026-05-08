@@ -55,18 +55,18 @@ wire_api = "responses"
 如果你有多个中转站，可以通过 profiles 快速切换：
 
 ```toml
-# 默认使用 GeekNow
-model_provider = "geeknow"
+# 默认使用 OJBK
+model_provider = "ojbk"
 model = "gpt-5-codex"
 model_reasoning_effort = "medium"
 network_access = "enabled"
 disable_response_storage = true
 
-# GeekNow 配置
-[model_providers.geeknow]
-name = "GeekNow"
-base_url = "https://api.geeknow.top/v1"
-env_key = "GEEKNOW_API_KEY"
+# OJBK 配置
+[model_providers.ojbk]
+name = "ojbk"
+base_url = "https://api.ojbk.top/v1"
+env_key = "OJBK_API_KEY"
 wire_api = "responses"
 
 # PackyAPI 配置
@@ -84,8 +84,8 @@ env_key = "SHENMA_API_KEY"
 wire_api = "responses"
 
 # Profile 切换
-[profiles.geeknow]
-model_provider = "geeknow"
+[profiles.ojbk]
+model_provider = "ojbk"
 model = "gpt-5-codex"
 model_reasoning_effort = "high"
 
@@ -102,8 +102,8 @@ model_reasoning_effort = "medium"
 
 **使用方式：**
 ```bash
-# 使用 GeekNow
-codex --profile geeknow
+# 使用 OJBK
+codex --profile ojbk
 
 # 切换到 PackyAPI
 codex --profile packy

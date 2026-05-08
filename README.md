@@ -63,9 +63,9 @@ disable_response_storage = true             # ⭐ 关键：禁用 OpenAI 端会�
 
 # ---- 第三方供应商定义 ----
 [model_providers.ojbk]
-name = "GeekNow"
+name = "ojbk"
 base_url = "https://api.ojbk.top/v1"    # ⭐ 中转站给的 API 地址
-env_key = "GEEKNOW_API_KEY"                 # ⭐ 环境变量的名字，不是 Key 本身
+env_key = "OJBK_API_KEY"                 # ⭐ 环境变量的名字，不是 Key 本身
 wire_api = "responses"                      # responses 或 chat，看中转站支持哪个
 
 # ---- 可选：Profile 多模型配置 ----
@@ -86,16 +86,16 @@ model_reasoning_effort = "minimal"
 
 ```powershell
 # 把 sk-xxxxx 换成你的真实 Key
-[Environment]::SetEnvironmentVariable("GEEKNOW_API_KEY", "sk-xxxxx", [EnvironmentVariableTarget]::User)
+[Environment]::SetEnvironmentVariable("OJBK_API_KEY", "sk-xxxxx", [EnvironmentVariableTarget]::User)
 
 # 验证（必须开新窗口才能读到）
-$env:GEEKNOW_API_KEY
+$env:OJBK_API_KEY
 ```
 
 **macOS / Linux：**
 
 ```bash
-echo 'export GEEKNOW_API_KEY="sk-xxxxx"' >> ~/.bashrc
+echo 'export OJBK_API_KEY="sk-xxxxx"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -137,7 +137,7 @@ codex --profile text
 | 报错 | 原因 | 解决 |
 |------|------|------|
 | `404 Not Found` | `wire_api` 协议不对或 `base_url` 错误 | 切换 `responses`/`chat`，检查 `/v1` 后缀 |
-| `401 Unauthorized` | 环境变量没生效 | 关掉终端开新窗口，`echo $GEEKNOW_API_KEY` 验证 |
+| `401 Unauthorized` | 环境变量没生效 | 关掉终端开新窗口，`echo $OJBK_API_KEY` 验证 |
 | `TOML parse error` | 配置文件语法错误 | 检查引号、等号、括号是否完整 |
 
 ## ❓ FAQ
